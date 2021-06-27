@@ -460,13 +460,13 @@ class Controller{
     }
 
     static clickAddPc(pc){ //->Object
-        Controller.count++;
         let modelList = [pc.cpuModel, pc.gpuModel, pc.ramModel, pc.storageModel];
         let gamingScore = PC.getGamingBenchmark(pc);
         let workScore = PC.getWorkBenchmark(pc);
         for(let i = 0; i < modelList.length; i++){
             if(modelList[i] == null) return alert("Please fill in all forms.")
         }
+        Controller.count++;
         return View.createbuiltPcPage(pc, gamingScore, workScore, Controller.count);
     }
 }
