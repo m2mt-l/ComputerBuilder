@@ -108,7 +108,7 @@ class PC{
         let cpuScore = parseInt(pc.cpuBenchmark * 0.25);
         let gpuScore = parseInt(pc.gpuBenchmark * 0.6);
         let ramScore = parseInt(pc.ramBenchmark * 0.125);
-        let storageScore = parseInt(pc.storageBenchmark * 0.025);
+        let storageScore = this.storageType = "SSD" ? parseInt(pc.storageBenchmark * 0.1) : parseInt(pc.storageBenchmark * 0.025);
         return cpuScore + gpuScore + ramScore + storageScore;
     }
 
